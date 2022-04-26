@@ -26,19 +26,21 @@ void spiral_print(vector<vector<int>> &arr, int rows , int cols) {
 		right_col--;
 		
 		// now print last row from right_col to left_col in reverse order...
-		
+		if(top_row <= bottom_row) {
 		for(int i = right_col; i >= left_col; i--) {
 			cout<<arr[bottom_row][i]<<" ";
 		}
 		// decrerase bottom_row
 		bottom_row--;
+	}
 		
 		// nbow we print first row from bottom_row to top_row..
-		
+		if(left_col <= right_col) {
 		for(int i = bottom_row; i >= top_row; i--) {
 			cout<<arr[i][left_col]<<" ";
 		}
 		left_col++;
+	}
 		
 	} 
 
